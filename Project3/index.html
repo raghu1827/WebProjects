@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <div class="header">
+      <h1>Customer Feedback Survey</h1>
+      <p>
+        The purpose of this customer feedback survey is to gather valuable
+        insights about your experience with our products and services. Your
+        feedback helps us improve our services.
+      </p>
+    </div>
+
+    <!-- Start of the Single Form -->
+    <form action="submit.php" method="POST">
+      <!-- Personal Information Section -->
+      <div class="form">
+        <h2>Personal Information</h2>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Your Name"
+          required
+        />
+        <br />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your Email"
+          required
+        />
+        <br />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="+91 (123) 456-7890"
+          required
+        />
+        <br />
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="18" max="100" required />
+
+        <label>Gender</label><br />
+
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="female">Female</label>
+
+        <input type="radio" name="gender" id="others" value="others" />
+        <label for="others">Others</label>
+        <br />
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="City" />
+      </div>
+
+      <!-- Feedback Section -->
+      <div class="feedback">
+        <h2>Feedback</h2>
+
+        <label>How satisfied are you with our services?</label>
+        <br />
+        <label for="satisfaction-1">1 - Very Dissatisfied</label>
+        <input type="radio" name="satisfaction" id="satisfaction-1" value="1" />
+        <input type="radio" name="satisfaction" id="satisfaction-2" value="2" />
+        <input type="radio" name="satisfaction" id="satisfaction-3" value="3" />
+        <input type="radio" name="satisfaction" id="satisfaction-4" value="4" />
+        <input type="radio" name="satisfaction" id="satisfaction-5" value="5" />
+        <label for="satisfaction-5">5 - Very Satisfied</label>
+
+        <br /><br />
+
+        <label for="recommend"
+          >How likely are you to recommend us to others? (1-10)</label
+        >
+        <select name="recommend" id="recommend">
+          <option value="1">1 - Not Likely</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10 - Very Likely</option>
+        </select>
+
+        <br /><br />
+
+        <label
+          >What do you like the most about our service? (Select all that
+          apply)</label
+        ><br />
+        <input type="checkbox" id="quality" name="like[]" value="Quality" />
+        <label for="quality">Quality</label><br />
+
+        <input type="checkbox" id="price" name="like[]" value="Price" />
+        <label for="price">Price</label><br />
+
+        <input
+          type="checkbox"
+          id="support"
+          name="like[]"
+          value="Customer Support"
+        />
+        <label for="support">Customer Support</label><br />
+
+        <input
+          type="checkbox"
+          id="delivery"
+          name="like[]"
+          value="Delivery Time"
+        />
+        <label for="delivery">Delivery Time</label><br />
+
+        <br />
+
+        <label>What can we improve? (Select all that apply)</label><br />
+        <input
+          type="checkbox"
+          id="improve_quality"
+          name="improve[]"
+          value="Product quality"
+        />
+        <label for="improve_quality">Product Quality</label><br />
+
+        <input
+          type="checkbox"
+          id="improve_support"
+          name="improve[]"
+          value="Customer support"
+        />
+        <label for="improve_support">Customer Support</label><br />
+
+        <input
+          type="checkbox"
+          id="improve_website"
+          name="improve[]"
+          value="Website experience"
+        />
+        <label for="improve_website">Website Experience</label><br />
+
+        <br />
+
+        <label for="suggestions">Any suggestions to improve our service?</label
+        ><br />
+        <textarea
+          id="suggestions"
+          name="suggestions"
+          rows="4"
+          placeholder="Enter your suggestions here..."
+        ></textarea
+        ><br />
+
+        <label for="experience">Please share your overall experience:</label
+        ><br />
+        <textarea
+          id="experience"
+          name="experience"
+          rows="4"
+          placeholder="Tell us about your experience..."
+        ></textarea>
+      </div>
+
+      <!-- Additional Features Section -->
+      <div class="features">
+        <h2>Additional Features</h2>
+
+        <input type="checkbox" id="consent" name="consent" required />
+        <label for="consent"
+          >I agree to the
+          <a href="terms.html" target="_blank">terms and conditions</a>.</label
+        >
+
+        <br /><br />
+
+        <!-- Submit & Reset Buttons Inside the Form -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+    <!-- End of Form -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
